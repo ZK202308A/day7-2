@@ -2,13 +2,19 @@ package org.example.quiz;
 
 import java.util.Scanner;
 
-public class QuizUI {
+public enum QuizUI {
+
+    INSTANCE;
 
     private Scanner scanner;
 
-    public QuizUI(Scanner scanner) {
+//    public QuizUI(Scanner scanner) {
+//        this.scanner = scanner;
+//    }
+    public void setScanner(Scanner scanner) {
         this.scanner = scanner;
     }
+
 
     public void show() {
 
@@ -29,6 +35,7 @@ public class QuizUI {
 
                 if(result == false){
                     System.out.println("Wrong answer Back Home");
+                    break;
                 }
             }
         }//end while
